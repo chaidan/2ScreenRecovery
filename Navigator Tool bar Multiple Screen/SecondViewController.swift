@@ -10,16 +10,32 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
+    let strNumberArray = ["ONE","TWO","THREE","FOUR","FIVE","SIX","SEVEN","EIGHT","NINE","TEN"]
+    
+    var intArrayIndex = 0
     
     @IBAction func secondScreenDecreseButton(_ sender: Any) {
+        if intArrayIndex < strNumberArray.count-1 {
+            intArrayIndex += 1
+            
+        }else{
+            intArrayIndex = 0
+        
+        }
+        print("intArrayIndex==>\(intArrayIndex)")
+        secondScreenNumberLabel.text = strNumberArray[intArrayIndex]
     }
     
     @IBAction func secondScreenIncreseButton(_ sender: Any) {
     }
     
     @IBOutlet weak var secondScreenNumberLabel: UILabel!
+
     
-    let strNumberArray = ["ONE","TWO","THREE","FOUR","FIVE","SIX","SEVEN","EIGHT","NINE","TEN"]
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
