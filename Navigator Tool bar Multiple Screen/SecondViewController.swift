@@ -9,6 +9,17 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    
+    @IBAction func secondScreenDecreseButton(_ sender: Any) {
+    }
+    
+    @IBAction func secondScreenIncreseButton(_ sender: Any) {
+    }
+    
+    @IBOutlet weak var secondScreenNumberLabel: UILabel!
+    
+    let strNumberArray = ["ONE","TWO","THREE","FOUR","FIVE","SIX","SEVEN","EIGHT","NINE","TEN"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

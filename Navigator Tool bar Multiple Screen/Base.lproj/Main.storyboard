@@ -96,8 +96,16 @@
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Second Screen" id="Ozl-gE-EBT">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="iOP-rd-77I"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="RZK-Il-jB3"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="iOP-rd-77I">
+                                            <connections>
+                                                <action selector="secondScreenDecreseButton:" destination="BfU-Td-1Ha" id="wJe-fC-aY5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="RZK-Il-jB3">
+                                            <connections>
+                                                <action selector="secondScreenIncreseButton:" destination="BfU-Td-1Ha" id="1hr-kT-KRk"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -111,6 +119,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="secondScreenNumberLabel" destination="chJ-Mn-We3" id="27j-cz-WJ1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rer-0O-YTj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
